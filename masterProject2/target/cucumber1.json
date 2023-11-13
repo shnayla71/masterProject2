@@ -1,0 +1,77 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "User is on the etsy home page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "User is on the Etsy home page",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-11-04T17:01:56.302Z",
+        "line": 26,
+        "name": "Add to card feature",
+        "description": "",
+        "id": "etsy-search-feature;add-to-card-feature",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 261000,
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "User searchs  in the Etsy page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 18000,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "User clicks to the item",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11000,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "User clicks to add to card button",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@etsyCard"
+          }
+        ]
+      }
+    ],
+    "name": "Etsy search feature",
+    "description": "",
+    "id": "etsy-search-feature",
+    "keyword": "Feature",
+    "uri": "file:src/main/resources/features/EtsySearch.feature",
+    "tags": []
+  }
+]

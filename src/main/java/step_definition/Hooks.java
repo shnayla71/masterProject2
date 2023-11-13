@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-/*public class Hooks {
+public class Hooks {
     private static final Logger logger = Logger.getLogger(Hooks.class);
 
     @Before(order = 2)
@@ -40,4 +40,4 @@ import org.openqa.selenium.TakesScreenshot;
         logger.info("Test clean up");
         Driver.closeDriver();
     }
-}*/
+}

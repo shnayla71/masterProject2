@@ -22,13 +22,7 @@ Feature: Etsy search feature
 
 
 
- @etsyCard
- Scenario: Add to card feature
-   When User searchs  in the Etsy page
-   Given User clicks to the item
-   And User clicks to add to card button
 
- @etsyTab
- Scenario: Tab access successfully
-   Given User clicks each tab at the Etsy page
-   Then User navigates to related tab page
+
+
+

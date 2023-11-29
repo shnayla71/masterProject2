@@ -19,17 +19,17 @@ public class EtsyHomePages {
 
 			Driver.getDriver().findElement(By.xpath("//div[@class='wt-select']")).click();
 			Thread.sleep(3000);
-			WebElement dropdown=Driver.getDriver().findElement(By.cssSelector("select[id='variation-selector-0']"));
+			WebElement dropdown=Driver.getDriver().findElement(By.xpath("//select[@id='variation-selector-0']"));
 			Select select=new Select(dropdown);
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			System.out.println(select.getFirstSelectedOption().getText());
 			Thread.sleep(3000);
-			select.selectByVisibleText(" Blank ($79.00)");
-			Thread.sleep(2000);
+			select.selectByIndex(3);
+			Thread.sleep(3000);
 			WebElement dropdown1=Driver.getDriver().findElement(By.xpath("//select[@id='variation-selector-1']"));
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			Select select1=new Select(dropdown1);
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			select1.selectByIndex(3);
 			return this;
 		}
@@ -43,26 +43,23 @@ public class EtsyHomePages {
 		@FindBy(xpath = "//*[@id=\"content\"]/div/div[1]/div/div[3]/div[6]/div/div/div/div[1]/div/ul/li[1]/div/a/div[1]/div/div/div/img")
 		public WebElement selectItem;
 
-		@FindBy(xpath ="//div[@class='wt-select']")
-		public WebElement selectSize;
 
-		@FindBy(xpath = "/html/body/main/div[1]/div[1]/div/div/div[1]/div[2]/div/div[6]/div[1]/div[1]/div[2]/div[1]/div[2]/select/option[4]")
-        public WebElement sizeOption;
+		@FindBy(xpath="//*[@id=\"listing-page-cart\"]//button[contains(text(),'Add')]")
 
-		@FindBy(id= "variation-selector-1")
-		public WebElement selectLetter;
-
-		@FindBy(xpath = "/html/body/main/div[1]/div[1]/div/div/div[1]/div[2]/div/div[6]/div[1]/div[1]/div[2]/div[2]/div[2]/select/option[4]")
-        public WebElement letterOption;
-
-		@FindBy(xpath="/html/body/main/div[1]/div[1]/div/div/div[1]/div[2]/div/div[6]/div[1]/div[4]/div[2]/form/div/button")
 	    public WebElement addToCardButton;
+	public EtsyHomePages addToCardMethod() throws InterruptedException{
+		Thread.sleep(3000);
+		Driver.getDriver().manage().window().maximize();
+		Thread.sleep(3000);
+		Driver.getDriver().findElement((By) addToCardButton).click();
 
+		return this;
+	}
 
-		@FindBy(xpath="//li[@data-ui='top-nav-promo-link'][1]")
+		@FindBy(xpath="//*[@id=\"desktop-category-topnav\"]/div/div/ul/li[2]/a")
 	    public WebElement firstTab;
 
-		@FindBy(xpath = "//li[@data-node-id='10855']")
+		@FindBy(xpath = "//*[@id=\"desktop-category-topnav\"]/div/div/ul/li[3]/a")
 	    public WebElement secondTab;
 
 	}

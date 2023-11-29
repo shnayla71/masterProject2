@@ -20,9 +20,10 @@ public class AddToCardFeature {
     EtsyHomePages etsyHomePages=new EtsyHomePages();
 
 
-    @When("User searchs  in the Etsy page")
-    public void userSearchsInTheEtsyPage() throws InterruptedException {
-        etsyHomePages.searchbox.sendKeys("Keychain");
+    @When("User searchs {string} in the Etsy pages")
+    public void userSearchsInTheEtsyPages(String arg0) throws Exception{
+
+        etsyHomePages.searchbox.sendKeys(arg0);
         Thread.sleep(3000);
         etsyHomePages.searchButton.click();
         Thread.sleep(2000);
@@ -43,7 +44,10 @@ public class AddToCardFeature {
 
     }
     @And("User clicks to add to card button")
-    public void user_clicks_to_add_to_card_button(){
-        etsyHomePages.addToCardButton.click();
+    public void user_clicks_to_add_to_card_button() throws InterruptedException {
+        Thread.sleep(3000);
+       etsyHomePages.addToCardMethod();
     }
+
+
 }
